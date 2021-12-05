@@ -17,7 +17,7 @@ fun main() {
     puzzle2(measurements)
 }
 
-fun puzzle1(measurements: List<Int>) {
+private fun puzzle1(measurements: List<Int>) {
     var increments = 0
     for (index in 1 until measurements.size) {
         val previous = measurements[index - 1]
@@ -30,7 +30,7 @@ fun puzzle1(measurements: List<Int>) {
     println("P1 Increments: $increments")
 }
 
-fun puzzle2(measurements: List<Int>) {
+private fun puzzle2(measurements: List<Int>) {
     var increments = 0
     for (index in 1 until measurements.size - 2) {
         val previous = measurements[index - 1] + measurements[index] + measurements[index + 1]

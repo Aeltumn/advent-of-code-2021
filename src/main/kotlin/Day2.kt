@@ -23,10 +23,11 @@ fun main() {
         }
     }
 
+    puzzle1(commands)
     puzzle2(commands)
 }
 
-fun puzzle1(commands: List<Pair<Command, Int>>) {
+private fun puzzle1(commands: List<Pair<Command, Int>>) {
     var horizon = 0
     var depth = 0
     for ((cmd, amount) in commands) {
@@ -41,7 +42,7 @@ fun puzzle1(commands: List<Pair<Command, Int>>) {
     println("P1 Multiplied: ${horizon * depth}")
 }
 
-fun puzzle2(commands: List<Pair<Command, Int>>) {
+private fun puzzle2(commands: List<Pair<Command, Int>>) {
     var horizon = 0
     var depth = 0
     var aim = 0

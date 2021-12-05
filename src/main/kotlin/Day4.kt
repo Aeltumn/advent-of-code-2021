@@ -3,10 +3,10 @@ import java.io.FileReader
 import java.nio.file.Paths
 
 /** A point on a board. X is right. Y is up. */
-data class Point(val x: Int, val y: Int)
+private data class Point(val x: Int, val y: Int)
 
 /** The bingo boards. */
-data class Board(val index: Int, val fields: Map<Point, Int>, val marked: List<Point> = listOf()) {
+private data class Board(val index: Int, val fields: Map<Point, Int>, val marked: List<Point> = listOf()) {
 
     /** The sum of all unmarked values on this board. */
     val score: Int
@@ -85,7 +85,7 @@ fun main() {
     puzzle2(inputs, boards)
 }
 
-fun puzzle1(inputs: List<Int>, boards: List<Board>) {
+private fun puzzle1(inputs: List<Int>, boards: List<Board>) {
     val remainingInputs = inputs.toMutableList()
 
     var boardsInPlay = boards
@@ -110,7 +110,7 @@ fun puzzle1(inputs: List<Int>, boards: List<Board>) {
     println("P1 Board ${winningBoard?.index} won. Score: ${(winningBoard?.score ?: 0)} * $lastDrawnNumber = ${(winningBoard?.score ?: 0) * lastDrawnNumber}")
 }
 
-fun puzzle2(inputs: List<Int>, boards: List<Board>) {
+private fun puzzle2(inputs: List<Int>, boards: List<Board>) {
     val remainingInputs = inputs.toMutableList()
 
     var boardsInPlay = boards

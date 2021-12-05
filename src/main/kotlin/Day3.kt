@@ -17,7 +17,7 @@ fun main() {
     puzzle2(measurements)
 }
 
-fun puzzle1(measurements: List<String>) {
+private fun puzzle1(measurements: List<String>) {
     val zeroes = mutableMapOf<Int, Int>()
     val ones = mutableMapOf<Int, Int>()
 
@@ -54,7 +54,7 @@ fun puzzle1(measurements: List<String>) {
     println("P1 Power Consumption: ${gammaRate * epsilonRate}")
 }
 
-fun filter(bit: Int, measurements: List<String>, compare: (Int, Int) -> Boolean): List<String> {
+private fun filter(bit: Int, measurements: List<String>, compare: (Int, Int) -> Boolean): List<String> {
     // Tally the zeroes and ones
     var zeroes = 0
     var ones = 0
@@ -86,7 +86,7 @@ fun filter(bit: Int, measurements: List<String>, compare: (Int, Int) -> Boolean)
     return filter(bit + 1, result, compare)
 }
 
-fun puzzle2(measurements: List<String>) {
+private fun puzzle2(measurements: List<String>) {
     // For oxygen, we keep a 1 if there are more or equal ones than zeroes
     val oxygen = filter(0, measurements) { zeroes, ones -> ones >= zeroes }[0].toInt(2)
 
