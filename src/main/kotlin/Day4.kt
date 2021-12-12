@@ -2,9 +2,6 @@ import java.io.BufferedReader
 import java.io.FileReader
 import java.nio.file.Paths
 
-/** A point on a board. X is right. Y is up. */
-private data class Point(val x: Int, val y: Int)
-
 /** The bingo boards. */
 private data class Board(val index: Int, val fields: Map<Point, Int>, val marked: List<Point> = listOf()) {
 
