@@ -6,7 +6,7 @@ import java.io.File
 fun main() {
     var puzzle1 = 0
     var puzzle2 = 0L
-    File("day8").readLines().forEach { line ->
+    File("src/main/resources/day8").readLines().forEach { line ->
         val input = line.split(" | ")
         val problem = input[1].split(" ").map { str -> str.toCharArray().sorted() }
 

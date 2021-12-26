@@ -65,7 +65,7 @@ private fun count(cubes: List<Cube>): Long {
  * Day 22 - Reactor Reboot
  */
 fun main() {
-    val input = File("day22").readLines()
+    val input = File("src/main/resources/day22").readLines()
     val cubes = mutableListOf<Cube>()
 
     for (line in input) {

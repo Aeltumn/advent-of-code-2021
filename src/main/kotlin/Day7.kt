@@ -5,7 +5,7 @@ import kotlin.math.abs
  * Day 7 - The Treachery of Whales
  */
 fun main() {
-    File("day7").readLines()[0].split(",").map { it.toInt() }.also { crabs ->
+    File("src/main/resources/day7").readLines()[0].split(",").map { it.toInt() }.also { crabs ->
         val min = crabs.minOrNull() ?: return
         val max = crabs.maxOrNull() ?: return
 

@@ -6,7 +6,7 @@ private typealias PolymerPair = Pair<Char, Char>
  * Day 14 - Extended Polymerization
  */
 fun main() {
-    val lines = File("day14").readLines()
+    val lines = File("src/main/resources/day14").readLines()
     var start = ""
     val functions = mutableMapOf<PolymerPair, List<PolymerPair>>()
 

@@ -13,7 +13,7 @@ enum class Command {
  */
 fun main() {
     val commands = mutableListOf<Pair<Command, Int>>()
-    BufferedReader(FileReader(Paths.get("day2").toFile())).use {
+    BufferedReader(FileReader(Paths.get("src/main/resources/day2").toFile())).use {
         while (it.ready()) {
             val line = it.readLine()
             val split = line.split(" ")

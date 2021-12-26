@@ -4,7 +4,7 @@ import java.io.File
  * Day 9 - Smoke Basin
  */
 fun main() {
-    val input = File("day9").readLines()
+    val input = File("src/main/resources/day9").readLines()
     val width = input.maxOfOrNull { it.length } ?: 0
     val height = input.size
     val map = Array(height) { Array<Int?>(width) { null } }

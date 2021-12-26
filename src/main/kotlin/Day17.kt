@@ -7,7 +7,7 @@ import kotlin.math.sign
  * Day 17 - Trick Shot
  */
 fun main() {
-    val input = File("day17").readLines()[0].substringAfter("target area: ").split(", ")
+    val input = File("src/main/resources/day17").readLines()[0].substringAfter("target area: ").split(", ")
     val targetXs = input[0].substringAfter("x=").split("..")
     val targetYs = input[1].substringAfter("y=").split("..")
 

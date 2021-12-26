@@ -7,7 +7,7 @@ import java.nio.file.Paths
  */
 fun main() {
     val measurements = mutableListOf<String>()
-    BufferedReader(FileReader(Paths.get("day3").toFile())).use {
+    BufferedReader(FileReader(Paths.get("src/main/resources/day3").toFile())).use {
         while (it.ready()) {
             measurements += it.readLine()
         }

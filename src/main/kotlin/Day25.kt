@@ -4,7 +4,7 @@ import java.io.File
  * Day 25 - Sea Cucumber
  */
 fun main() {
-    val inputLines = File("day25").readLines()
+    val inputLines = File("src/main/resources/day25").readLines()
     val width = inputLines.maxOfOrNull { it.length } ?: 0
     val height = inputLines.size
     val map = Array(height) { Array<Char?>(width) { null } }

@@ -4,7 +4,7 @@ import java.io.File
  * Day 6 - Lanternfish
  */
 fun main() {
-    val input = File("day6").readLines()
+    val input = File("src/main/resources/day6").readLines()
     val fish = input[0].split(",").map { it.toInt() }
 
     println("P1 Total fish ${simulate(80, fish).values.sum()}")

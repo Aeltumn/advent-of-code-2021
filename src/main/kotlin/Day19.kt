@@ -40,7 +40,7 @@ private data class AlignedScanner(val index: Int, val positions: List<Vector>, v
  * Day 19 - Beacon Scanner
  */
 fun main() {
-    val input = File("day19").readLines()
+    val input = File("src/main/resources/day19").readLines()
     var scannerIndex = -1
     var positions = mutableSetOf<Vector>()
     val scanners = mutableListOf<Scanner>()

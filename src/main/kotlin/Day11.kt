@@ -4,7 +4,7 @@ import java.io.File
  * Day 11 - Dumbo Octopus
  */
 fun main() {
-    val inputLines = File("day11").readLines()
+    val inputLines = File("src/main/resources/day11").readLines()
     val width = inputLines.maxOfOrNull { it.length } ?: 0
     val height = inputLines.size
     val area = width * height

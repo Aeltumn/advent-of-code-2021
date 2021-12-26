@@ -88,7 +88,7 @@ private fun testUsingReverseEngineeredALU(input: String): Boolean {
  */
 fun main() {
     // Input
-    val inputLines = File("day24").readLines().map {
+    val inputLines = File("src/main/resources/day24").readLines().map {
         if (it.isBlank()) emptyList() else it.split(" ")
     }
 

@@ -11,7 +11,7 @@ private val NEIGHBORS = listOf(
  * Day 15 - Chiton
  */
 fun main() {
-    val input = File("day15").readLines()
+    val input = File("src/main/resources/day15").readLines()
     val cellWidth = input.maxOfOrNull { it.length } ?: 0
     val cellHeight = input.size
 

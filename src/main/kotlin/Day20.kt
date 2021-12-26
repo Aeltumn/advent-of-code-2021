@@ -4,7 +4,7 @@ import java.io.File
  * Day 20 - Trench Map
  */
 fun main() {
-    val input = File("day20").readLines()
+    val input = File("src/main/resources/day20").readLines()
     val enhancementData = input[0]
 
     // In the example the 0 enhancement is . but in the real data it's a #, which means the entire infinite picture

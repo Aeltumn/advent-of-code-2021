@@ -203,7 +203,7 @@ private fun String.buildTree(): TreeNode {
  * Day 18 - Snailfish
  */
 fun main() {
-    val input = File("day18").readLines().map { it.buildTree() }
+    val input = File("src/main/resources/day18").readLines().map { it.buildTree() }
 
     // Add up all values
     var value = input[0]

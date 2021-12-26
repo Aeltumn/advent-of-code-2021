@@ -60,7 +60,7 @@ fun main() {
     val inputs = mutableListOf<Int>()
     val boards = mutableListOf<Board>()
 
-    BufferedReader(FileReader(Paths.get("day4").toFile())).use {
+    BufferedReader(FileReader(Paths.get("src/main/resources/day4").toFile())).use {
         // The first line has inputs
         val inputLine = it.readLine()
         for (num in inputLine.split(",")) {

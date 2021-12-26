@@ -6,7 +6,7 @@ import kotlin.math.sign
  * Day 5 - Hydrothermal Venture
  */
 fun main() {
-    val input = File("day5").readLines()
+    val input = File("src/main/resources/day5").readLines()
 
     puzzle1(input)
     puzzle2(input)

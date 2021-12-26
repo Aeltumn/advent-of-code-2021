@@ -12,7 +12,7 @@ private enum class SyntaxType {
  * Day 10 - Syntax Scoring
  */
 fun main() {
-    val input = File("day10").readLines()
+    val input = File("src/main/resources/day10").readLines()
     var syntaxErrorScore = 0
     val completionScores = mutableListOf<Long>()
 

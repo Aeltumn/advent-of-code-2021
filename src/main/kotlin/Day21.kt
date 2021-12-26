@@ -8,7 +8,7 @@ import kotlin.math.min
  */
 fun main() {
     // The puzzle is so widly different in puzzle 2 here that I just copied the first version over.
-    val input = File("day21").readLines()
+    val input = File("src/main/resources/day21").readLines()
     val player1Start = input[0].substringAfter("Player 1 starting position: ").toInt() - 1
     val player2Start = input[1].substringAfter("Player 2 starting position: ").toInt() - 1
 
@@ -69,7 +69,7 @@ fun main() {
 }
 
 private fun puzzle1() {
-    val input = File("day21").readLines()
+    val input = File("src/main/resources/day21").readLines()
     var player1 = input[0].substringAfter("Player 1 starting position: ").toInt() - 1
     var player2 = input[1].substringAfter("Player 2 starting position: ").toInt() - 1
 

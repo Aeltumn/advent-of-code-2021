@@ -12,7 +12,7 @@ private fun Int.toPaddedString(radix: Int, length: Int): String {
 fun main() {
     // The input represented in bits stored as chars, I could keep it as an actual int but I prefer
     // checking chars over dealing with bit manipulation in Kotlin.
-    val input = File("day16").readLines()[0].lowercase()
+    val input = File("src/main/resources/day16").readLines()[0].lowercase()
         .flatMap { it.digitToInt(16).toPaddedString(2, 4).toCharArray().toList() }
     var head = 0
     var totalVersion = 0

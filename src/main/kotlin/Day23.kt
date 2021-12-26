@@ -4,7 +4,7 @@ import java.io.File
  * Day 23 - Amphipod
  */
 fun main() {
-    val input = File("day23").readLines()
+    val input = File("src/main/resources/day23").readLines()
 
     // Puzzle 1 - 2 / 20000
     // Puzzle 2 - 4 / 50000

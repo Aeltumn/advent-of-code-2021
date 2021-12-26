@@ -4,7 +4,7 @@ import java.io.File
  * Day 12 - Passage Pathing
  */
 fun main() {
-    val input = File("day12").readLines()
+    val input = File("src/main/resources/day12").readLines()
     val nodes = mutableMapOf<String, Node>()
     val startNode = nodes.computeIfAbsent("start") { Node(it) }
     val endNode = nodes.computeIfAbsent("end") { Node(it) }

@@ -11,7 +11,7 @@ fun main() {
     val inputPoints = mutableSetOf<Point>()
     val folds = mutableListOf<Pair<FoldDirection, Int>>()
 
-    for (line in File("day13").readLines()) {
+    for (line in File("src/main/resources/day13").readLines()) {
         // When we encounter a blank line we start reading folds
         if (line.isBlank()) {
             areReadingFolds = true
