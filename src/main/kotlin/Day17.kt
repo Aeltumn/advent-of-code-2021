@@ -54,7 +54,7 @@ fun main() {
         yVelocity = velocityY
 
         // Keep running steps until we're either hopeless or we're done
-        while(!runStep()) {
+        while (!runStep()) {
             // If we've hopelessly missed we stop
             if (xVelocity.sign != (if (x < minX) 1 else -1) && y < minY) {
                 return false

@@ -78,7 +78,7 @@ fun main() {
     map[0][0] = 0 to emptyList()
 
     // Keep updating all points until they're all minimal
-    while(updateAllPoints());
+    while (updateAllPoints());
 
     // Get the risk for getting to the bottom corner
     println("P2 ${map[height - 1][width - 1].first}")

@@ -56,13 +56,13 @@ fun main() {
         }
     }
 
-    fun puzzle1()  {
+    fun puzzle1() {
         paths = mutableSetOf()
         iteratePath(listOf(startNode), false)
         println("P1 ${paths.size}")
     }
 
-    fun puzzle2()  {
+    fun puzzle2() {
         paths = mutableSetOf()
         iteratePath(listOf(startNode), true)
         println("P2 ${paths.size}")

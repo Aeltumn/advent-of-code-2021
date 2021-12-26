@@ -1,5 +1,5 @@
 import java.io.File
-import java.util.Stack
+import java.util.*
 
 private enum class SyntaxType {
     PARENTHESES,
@@ -16,12 +16,12 @@ fun main() {
     var syntaxErrorScore = 0
     val completionScores = mutableListOf<Long>()
 
-    lines@for (line in input) {
+    lines@ for (line in input) {
         val history = Stack<SyntaxType>()
 
         // Filter out corrupted lines
         for (character in line) {
-            when(character) {
+            when (character) {
                 '(' -> history.push(SyntaxType.PARENTHESES)
                 '[' -> history.push(SyntaxType.BRACKETS)
                 '{' -> history.push(SyntaxType.BRACES)
@@ -61,7 +61,7 @@ fun main() {
         var amount = 0L
         while (history.isNotEmpty()) {
             amount *= 5
-            when(history.pop()) {
+            when (history.pop()) {
                 SyntaxType.PARENTHESES -> amount += 1
                 SyntaxType.BRACKETS -> amount += 2
                 SyntaxType.BRACES -> amount += 3

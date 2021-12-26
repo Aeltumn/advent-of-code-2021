@@ -12,7 +12,7 @@ private data class Board(val index: Int, val fields: Map<Point, Int>, val marked
     /** Whether this board is complete. */
     val complete: Boolean
         get() {
-            rows@for (row in 0..4) {
+            rows@ for (row in 0..4) {
                 for (x in 0..4) {
                     // If this point is not marked, discard the row
                     if (Point(x, row) !in marked) continue@rows
@@ -21,7 +21,7 @@ private data class Board(val index: Int, val fields: Map<Point, Int>, val marked
                 // Every point in the row is marked, bingo!
                 return true
             }
-            columns@for (column in 0..4) {
+            columns@ for (column in 0..4) {
                 for (y in 0..4) {
                     // If this point is not marked, discard the column
                     if (Point(column, y) !in marked) continue@columns

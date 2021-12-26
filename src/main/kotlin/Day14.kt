@@ -61,7 +61,9 @@ private fun runPolymerization(iterations: Int, start: String, functions: Map<Pol
     val amounts =
         characters.associateWith { char ->
             // Every letter will be in two pairs with the first and last being in one more
-            val doubleTotal = state.filterKeys { it.first == char || it.second == char }.map { entry -> if (entry.key.first == char && entry.key.second == char) entry.value * 2 else entry.value }.sum()
+            val doubleTotal = state.filterKeys { it.first == char || it.second == char }
+                .map { entry -> if (entry.key.first == char && entry.key.second == char) entry.value * 2 else entry.value }
+                .sum()
 
             // Round up in a long-compatible way
             if (doubleTotal % 2 == 0L) {

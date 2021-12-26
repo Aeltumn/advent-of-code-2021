@@ -35,7 +35,7 @@ fun main() {
     var firstResult = 0
     for ((direction, fold) in folds) {
         points = points.map {
-            when(direction) {
+            when (direction) {
                 FoldDirection.X -> {
                     if (it.x < fold) {
                         it

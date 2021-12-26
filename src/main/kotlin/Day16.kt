@@ -12,7 +12,8 @@ private fun Int.toPaddedString(radix: Int, length: Int): String {
 fun main() {
     // The input represented in bits stored as chars, I could keep it as an actual int but I prefer
     // checking chars over dealing with bit manipulation in Kotlin.
-    val input = File("day16").readLines()[0].lowercase().flatMap { it.digitToInt(16).toPaddedString(2, 4).toCharArray().toList() }
+    val input = File("day16").readLines()[0].lowercase()
+        .flatMap { it.digitToInt(16).toPaddedString(2, 4).toCharArray().toList() }
     var head = 0
     var totalVersion = 0
 
@@ -64,7 +65,7 @@ fun main() {
                 while (head < end) {
                     values += readPacket()
                 }
-                require (head == end) { "Reading packets in operator did not land at the correct spot" }
+                require(head == end) { "Reading packets in operator did not land at the correct spot" }
             } else {
                 // 11 bits are a number of packets
                 val amount = readValue(11)
@@ -74,7 +75,7 @@ fun main() {
             }
 
             var result = 0L
-            when(type) {
+            when (type) {
                 0 -> result = values.sum()
                 1 -> {
                     result = 1
@@ -85,15 +86,15 @@ fun main() {
                 2 -> result = values.minOrNull() ?: 0
                 3 -> result = values.maxOrNull() ?: 0
                 5 -> {
-                    require (values.size == 2) { "Greater than only supports two subpackets" }
+                    require(values.size == 2) { "Greater than only supports two subpackets" }
                     return if (values[0] > values[1]) 1 else 0
                 }
                 6 -> {
-                    require (values.size == 2) { "Lesser than only supports two subpackets" }
+                    require(values.size == 2) { "Lesser than only supports two subpackets" }
                     return if (values[0] < values[1]) 1 else 0
                 }
                 7 -> {
-                    require (values.size == 2) { "Equal to only supports two subpackets" }
+                    require(values.size == 2) { "Equal to only supports two subpackets" }
                     return if (values[0] == values[1]) 1 else 0
                 }
             }
